@@ -28,15 +28,27 @@ function updateOrderSummary() {
     document.getElementById("item-count").innerText = itemCount;
     document.getElementById("total-amount").innerText = totalAmount;
 
-    // Show the order section if at least one item is selected
+    
     document.getElementById("order-section").style.display = itemCount > 0 ? "block" : "none";
 }
 
 function placeOrder() {
     alert("Order placed successfully!");
-    // Reset selections
+    
     document.querySelectorAll(".menu-item").forEach(item => item.classList.remove("selected"));
     itemCount = 0;
     totalAmount = 0;
     updateOrderSummary();
+}
+
+function cancelOrder() {
+    
+    document.getElementById("item-count").innerText = "0";
+    document.getElementById("total-amount").innerText = "0";
+    
+    
+    document.getElementById("order-section").style.display = "none";
+    
+    
+    alert("Order has been canceled.");
 }
