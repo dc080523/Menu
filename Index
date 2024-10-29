@@ -7,31 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Food Menu</h1>
+    <h1>The Menu</h1>
 
-    <!-- Menu items -->
+    
     <div class="menu-container">
         <div class="menu-item" onclick="selectItem(this, 'Hotdog', 50)" onmouseover="hoverItem(this)" onmouseout="removeHover(this)">
+            <img src="C:\Users\LB908-39\Documents\Dela cruz\em\images\hotdog.jpg" alt="Hotdog" />
             <p>Hotdog - $50</p>
         </div>
         <div class="menu-item" onclick="selectItem(this, 'Egg', 20)" onmouseover="hoverItem(this)" onmouseout="removeHover(this)">
+            <img src="C:\Users\LB908-39\Documents\Dela cruz\em\images\Egg.jpg" alt="Egg" />
             <p>Egg - $20</p>
         </div>
         <div class="menu-item" onclick="selectItem(this, 'Juice', 30)" onmouseover="hoverItem(this)" onmouseout="removeHover(this)">
+            <img src="C:\Users\LB908-39\Documents\Dela cruz\em\images\juice.jpg" alt="Juice" />
             <p>Juice - $30</p>
         </div>
         <div class="menu-item" onclick="selectItem(this, 'Cake', 60)" onmouseover="hoverItem(this)" onmouseout="removeHover(this)">
+            <img src="C:\Users\LB908-39\Documents\Dela cruz\em\images\cake.jpg" alt="Cake" />
             <p>Cake - $60</p>
         </div>
     </div>
 
-    <!-- Ordering section -->
+    
     <div id="order-section" style="display: none;">
         <h2>Order Summary</h2>
         <p>Items Selected: <span id="item-count">0</span></p>
         <p>Total Amount: $<span id="total-amount">0</span></p>
         <button onclick="placeOrder()">Order</button>
+        <button onclick="cancelOrder()">Cancel</button>
     </div>
+    
 
     <script src="script.js"></script>
 </body>
