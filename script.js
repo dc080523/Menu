@@ -72,14 +72,22 @@ function updateOrderSummary() {
 }
 
 function placeOrder() {
-    alert("Order placed successfully!");
-    resetOrder();
+    if (itemCount === 0) {
+        alert("Error: Please order something.");
+    } else {
+        alert("Order placed successfully!");
+        resetOrder();
+    }
 }
 
 function cancelOrder() {
-    if (confirm("Are you sure you want to cancel the order?")) {
-        resetOrder();
-        alert("Order has been canceled.");
+    if (itemCount === 0) {
+        alert("Error: Please order something.");
+    } else {
+        if (confirm("Are you sure you want to cancel the order?")) {
+            resetOrder();
+            alert("Order has been canceled.");
+        }
     }
 }
 
